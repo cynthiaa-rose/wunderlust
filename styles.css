@@ -1,0 +1,497 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    --fonts: molle, montserrat;
+    --yellow: #F6D64A;
+    --teal: #55bcd5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --darkgray: #222222;
+    --lightgray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+.sr-only{
+    display: none;
+}
+
+#skip{
+    overflow: hidden;
+    position: absolute;
+    display: none;
+}
+
+
+header{
+    height: 250px;
+    background-image: linear-gradient(#499BD2, #FFFFFF);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    align-items: center;
+}
+
+nav{
+    font-family: montserrat;
+    text-transform: uppercase;
+}
+
+nav li{
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 200px;
+    margin: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    
+}
+
+nav li:hover{
+    background-color: var(--yellow);
+}
+nav a{
+    text-decoration: none;
+    text-align: center;
+}
+
+h1{
+    font-family: molle;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2{
+    font-family: molle;
+    font-size: 30px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+#intro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+}
+
+#intro p{
+    grid-column: 1;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#img-grid{
+    margin-right: 100px;
+    grid-gap: 20px;
+}
+
+#plan div{
+    background-color: var(--yellow);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 100px;
+}
+
+#plan h3{
+    grid-column: 1/-1;
+    font-size: 30px;
+}
+
+#plan section{
+    background-color: var(--teal);
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#plan h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+
+#testimonials div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 100px;
+}
+
+#testimonials h3{
+    grid-column: 1/-1;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+#about div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 100px;
+    background-color: var(--blue);
+}
+
+#about h3{
+    grid-column: 1/-1;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+h3{
+    font-family: molle;
+}
+
+#contact form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#contact h3{
+    grid-column: 1/-1;
+    font-size: 30px;
+}
+
+#contact{
+    padding: 1rem 2rem 1rem 2rem;
+  margin: 0 auto;
+}
+
+#contact form{
+    text-transform: uppercase;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  grid-gap: 1rem;
+}
+
+#contact input{
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  border: 2px solid var(--purple);
+}
+
+#contact label {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.custom-select {
+  font-family: var(--fonts);
+  border: 2px solid var(--purple);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.required{
+  color: var(--purple);
+}
+
+.form-required{
+  font-size: 20px;
+  font-style: italic;
+}
+
+#contact fieldset{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#contact legend{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#names{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#nums{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px;
+}
+
+#selects{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 10px;
+}
+
+
+#mySubmit{
+  background-color: var(--purple);
+  color: var(--white);
+  text-transform: uppercase;
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+
+h4, p, q, small, button, form{
+    font-family: montserrat;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: var(--lightgray);
+}
+
+@media screen and (max-width: 600px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr
+    }
+        
+    h1{
+        grid-column: 2 / 4;
+        grid-row-start: 1;
+    }  
+        
+    header p{
+        grid-column: 2 / 4;
+        grid-row-start: 1;
+    }
+        
+    header nav{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+    }
+    
+    nav li{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    #img-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+        
+        
+    #plan div{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+        
+    #plan h3{
+        grid-column: 1/-1;
+    }
+        
+    #testimonials div{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+        
+    #testimonials h3{
+        grid-column: 1/-1;
+    }
+        
+        
+    #about div{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+        
+    #about h3{
+        grid-column: 1/-1;
+    }
+       
+    #toggle{
+        display: none;
+    }
+        
+    #contact fieldset{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+        
+    #menu-toggle>label{
+        display: none;
+    }
+        
+    footer{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 760px){
+    header{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+        
+    h1{
+        grid-column: 2 / 4;
+        grid-row-start: 1;
+    }  
+        
+    header p{
+        grid-column: 2 / 4;
+        grid-row-start: 1;
+    }
+        
+    header nav{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+    }
+    
+    nav li{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    #img-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+        
+        
+    #plan div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+        
+    #plan h3{
+        grid-column: 1/ -1;
+    }
+        
+    #testimonials div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+        
+    #testimonials h3{
+        grid-column: 1/ -1;
+    }
+        
+        
+    #about div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+        
+    #about h3{
+        grid-column: 1/-1;
+    }
+       
+    #toggle{
+        display: none;
+    }
+        
+    #contact fieldset{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+        
+    #menu-toggle>label{
+        display: none;
+    }
+        
+    footer{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      
+      #intro p{
+        grid-column-start: 1;
+      }
+      
+      #img-grid{
+        grid-column-start: 2;
+      }
+      
+      
+      #plan div{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      #plan h3{
+        grid-column: 1/ -1;
+      }
+      
+      #testimonials div{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      #testimonials h3{
+        grid-column: 1/ -1;
+      }
+      
+      #contact form{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      #contact h3{
+        grid-column: 1/ -1;
+      }
+}
